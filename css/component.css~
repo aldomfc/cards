@@ -1,0 +1,92 @@
+.stack {
+	margin: 0 auto;
+	position: relative;
+	z-index: 1000;
+	width: 225px;
+	height:277px;
+	padding: 0;
+	list-style: none;
+    pointer-events: none;
+}
+
+.stack__item {
+	background: #fff;
+	height: 100%;
+	width: 100%;
+	border-radius: 4px;
+	text-align: center;
+	overflow: hidden;
+	position: absolute;
+	opacity: 0;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	pointer-events: auto;
+}
+
+.stack__item img {
+	width: 100%;
+	display: block;
+	pointer-events: none;
+}
+
+.controls {
+	position: static;
+	text-align: center;
+	margin: 10px;
+}
+
+
+
+.content {
+	-webkit-align-self: stretch;
+	align-self: stretch;
+	overflow: hidden;
+	position: relative;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+}
+.color-f { background: white; }
+
+
+/***********************************************/
+/******************** fandeal *********************/
+/***********************************************/
+.stack--fandeal .stack__item--accept {
+	-webkit-animation: fandealAccept 0.5s forwards;
+	animation: fandealAccept 0.5s forwards;
+	-webkit-transform-origin: 50% 300%;
+	transform-origin: 50% 300%;
+}
+
+@-webkit-keyframes fandealAccept {
+	to {
+		opacity: 0;
+		-webkit-transform: rotate3d(0,0,1,20deg);
+		transform: rotate3d(0,0,1,20deg);
+	}
+}
+
+@keyframes fandealAccept {
+	to {
+		opacity: 0;
+		-webkit-transform: rotate3d(0,0,1,20deg);
+		transform: rotate3d(0,0,1,20deg);
+	}
+}
+
+
+
